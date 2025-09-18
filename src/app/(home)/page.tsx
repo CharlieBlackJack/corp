@@ -6,5 +6,11 @@ export const metadata: Metadata = {
 };
 
 export default function RootPage() {
-  return <Content imageSrc="/home.jpg" altText="Home" title="Hello world" />;
+  return (
+    <Content
+      imageSrc="/home.jpg"
+      altText="Home"
+      title="Next.js Said Hello world!"
+    />
+  );
 }

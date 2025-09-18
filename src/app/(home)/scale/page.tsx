@@ -8,6 +8,6 @@ export const metadata: Metadata = {
 
 export default function ScalePage() {
   return (
-    <Content imageSrc="/scale.jpg" altText="Scale" title="Scale Said Hello" />
+    <Content imageSrc="/scale.jpg" altText="Scale" title="Scale Said Hello!" />
   );
 }

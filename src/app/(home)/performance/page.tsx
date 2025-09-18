@@ -11,7 +11,7 @@ export default function PerformancePage() {
     <Content
       imageSrc="/performance.jpg"
       altText="Performance"
-      title="Performance Said Hello"
+      title="Performance Said Hello!"
     />
   );
 }

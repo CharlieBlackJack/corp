@@ -11,7 +11,7 @@ export default function ReliabilityPage() {
     <Content
       imageSrc="/reliability.jpg"
       altText="Reliability"
-      title="Reliability Said Hello"
+      title="Reliability Said Hello!"
     />
   );
 }
