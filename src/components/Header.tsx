@@ -8,12 +8,14 @@ const pathData = [
   { name: "Performance", href: "/performance" },
   { name: "Reliability", href: "/reliability" },
   { name: "Scale", href: "/scale" },
+  { name: "Blog", href: "/blog" },
+  { name: "ParallelRoutes", href: "/parallel-routes" },
+  { name: "InterceptingRoutes", href: "/intercepting-routes" },
 ];
 
 export default function Header() {
   const pathname = usePathname();
-  console.log(pathname, 1321321);
-  
+
   return (
     <div>
       <div className="absolute w-full z-10">
