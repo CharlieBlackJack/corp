@@ -1,15 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export function middleware(request: NextRequest) {
-  console.log("Pathname:" + request.nextUrl.pathname);
+export async function middleware(request: NextRequest) {
+  if (request.nextUrl.pathname !== "/login") {
+    const token = request.cookies.get("token")?.value;
 
-  //   if (request.nextUrl.pathname.startsWith("/blog")) {
-  //     return NextResponse.rewrite(new URL("/blog/2", request.url));
-  //   }
+    if (!token) {
+      return NextResponse.redirect(new URL("/login", request.url));
+    }
+  }
 
-  //   if (request.nextUrl.pathname.startsWith("/blog")) {
-  //     return NextResponse.redirect(new URL("/scale", request.url));
-  //   }
+  // if (request.nextUrl.pathname.startsWith("/blog")) {
+  //   return NextResponse.redirect(new URL("/scale", request.url));
+  // }
 }
 
 export const config = {
