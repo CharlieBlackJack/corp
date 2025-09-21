@@ -11,6 +11,7 @@ const pathData = [
   { name: "Blog", href: "/blog" },
   { name: "ParallelRoutes", href: "/parallel-routes" },
   { name: "InterceptingRoutes", href: "/intercepting-routes" },
+  { name: "ToDoList", href: "/todolist" },
 ];
 
 export default function Header() {
