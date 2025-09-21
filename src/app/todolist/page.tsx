@@ -55,7 +55,7 @@ export default function Page() {
         ...item,
         ...row,
       });
-      await fetch(`http://localhost:3000/api/articles/${id}`, {
+      await fetch(`/api/articles/${id}`, {
         method: "PATCH",
         body: JSON.stringify(row),
       });
@@ -68,7 +68,7 @@ export default function Page() {
   };
 
   const onDelete = async (id: React.Key) => {
-    await fetch(`http://localhost:3000/api/articles/${id}`, {
+    await fetch(`/api/articles/${id}`, {
       method: "DELETE",
     });
     messageApi.success("删除成功");
@@ -147,7 +147,7 @@ export default function Page() {
       return;
     }
 
-    await fetch("http://localhost:3000/api/articles", {
+    await fetch("/api/articles", {
       method: "POST",
       body: JSON.stringify({
         title: "训练营",
@@ -194,7 +194,7 @@ export default function Page() {
 
   const queryData = async () => {
     await fetch(
-      `http://localhost:3000/api/articles?pageNum=${params.pageNum}&pageSize=${params.pageSize}&query=${params.query}`
+      `/api/articles?pageNum=${params.pageNum}&pageSize=${params.pageSize}&query=${params.query}`
     )
       .then((response) => response.json())
       .then((result) => {
